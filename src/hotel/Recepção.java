@@ -7,7 +7,7 @@ public class Recepção {
 	private ArrayList<Estadia> estadias;
 	
 	public Recepção() {
-		this.estadias = new ArrayList<estadias>();
+		this.estadias = new ArrayList<Estadia>();
 		
 	}
 	
@@ -38,10 +38,11 @@ public class Recepção {
 	
 	public String toString() {
 		String hospedados = "Estadias:" + System.lineSeparator();
-		for (Estadias estadias : estadias) {
+		for (Estadia estadias : estadias) {
 			hospedados += String.format("%s (%s): %d dias com o preço de R$ %.2f", 
-					estadia.getNome(), estadia.getTipo(), estadia.getDias(), estadia.getValor()
+					estadias.getNome(), estadias.getTipo(), estadias.getDias(), estadias.getValor()
 					+ System.lineSeparator());
 		}
+		return hospedados;
 	}
 }
